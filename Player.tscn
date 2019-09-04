@@ -1,0 +1,64 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://Player.gd" type="Script" id=1]
+[ext_resource path="res://assests/PHPlayer.png" type="Texture" id=2]
+[ext_resource path="res://assests/UpBox.png" type="Texture" id=3]
+[ext_resource path="res://assests/DownBox.png" type="Texture" id=4]
+[ext_resource path="res://assests/Switch.wav" type="AudioStream" id=5]
+[ext_resource path="res://assests/Impact.wav" type="AudioStream" id=6]
+[ext_resource path="res://Camera2D.gd" type="Script" id=7]
+[ext_resource path="res://assests/Splosion.wav" type="AudioStream" id=8]
+[ext_resource path="res://assests/uuhhh.wav" type="AudioStream" id=9]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 24.5, 37.1617 )
+
+[sub_resource type="SpriteFrames" id=2]
+animations = [ {
+"frames": [ ExtResource( 3 ) ],
+"loop": true,
+"name": "",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 4 ) ],
+"loop": true,
+"name": "down",
+"speed": 5.0
+} ]
+
+[node name="Player" type="KinematicBody2D"]
+collision_layer = 2
+collision_mask = 13
+script = ExtResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="."]
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 2 )
+
+[node name="PlayerCollision" type="CollisionShape2D" parent="."]
+shape = SubResource( 1 )
+
+[node name="oldsprite" type="AnimatedSprite" parent="."]
+visible = false
+scale = Vector2( 0.5, 0.5 )
+frames = SubResource( 2 )
+animation = ""
+
+[node name="FlipSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 5 )
+
+[node name="Impact" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 6 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+current = true
+limit_left = 0
+limit_top = 0
+script = ExtResource( 7 )
+
+[node name="Wham" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 8 )
+pitch_scale = 0.7
+
+[node name="Uuhhh" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 9 )
