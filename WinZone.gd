@@ -12,9 +12,10 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 # you spin me right round baby right round
 func _process(delta):
-	$Sprite.rotation += .1
-	if $Sprite.rotation == 360:
-		$Sprite.rotation = 0
+	pass
+	#$Sprite.rotation += .1
+	#if $Sprite.rotation == 360:
+	#	$Sprite.rotation = 0
 	
 
 
