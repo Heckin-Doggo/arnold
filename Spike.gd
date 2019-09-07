@@ -16,4 +16,5 @@ func _on_Spike_body_entered(body):
 	if body.name == "Player":
 		print("OOF")
 		globals.player["lives"] -= 1
+		globals.player["died"] = true
 		get_tree().reload_current_scene()

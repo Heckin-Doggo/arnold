@@ -37,8 +37,10 @@ func _ready():
 	
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-
-		
+func _process(delta):
+	if globals.player["died"]:  # death check
+		$Uuhhh.play()
+		globals.player["died"] = false
 
 # gets inputs
 func get_input():
