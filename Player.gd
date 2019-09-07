@@ -112,26 +112,6 @@ func _physics_process(delta):
 			$Impact.play()
 			#print(abs(new_posy-old_posy))  # for debug
 			
-		# WHAM
-		# print(abs(old_speed-velocity.y)) use only for debug, otherwise its kinda annoying
-		if abs(old_speed-velocity.y) >= 3100:  # 3100 is the px/s speed required to create a WHAM
-			print("WHAM " + str(wham_count))
-			wham_count += 1
-			$Wham.play()
-			emit_signal("wham")  # for wham buttons or attacks when they become a thing
-			
-			velocity.x = 0  # makes you have to regain speed
-			
-			var cam = $Camera2D
-			cam.offset.x = rand_range(0,10)
-			yield(get_tree().create_timer(.1), "timeout")
-			cam.offset.y = rand_range(0,25)
-			yield(get_tree().create_timer(.1), "timeout")
-			cam.offset.x = rand_range(-10,0)
-			yield(get_tree().create_timer(.1), "timeout")
-			cam.offset.y = rand_range(-20,0)
-			yield(get_tree().create_timer(.1), "timeout")
-			cam.offset = Vector2(0,0)
 			
 			
 	

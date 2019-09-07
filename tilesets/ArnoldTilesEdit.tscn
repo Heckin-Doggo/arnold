@@ -1,0 +1,96 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://assests/arnold/tiles/Brick.png" type="Texture" id=1]
+[ext_resource path="res://assests/arnold/tiles/Slate1.png" type="Texture" id=2]
+[ext_resource path="res://assests/arnold/tiles/Slate1Flipped.png" type="Texture" id=3]
+[ext_resource path="res://assests/arnold/tiles/Slate2.png" type="Texture" id=4]
+[ext_resource path="res://assests/arnold/tiles/Slate3.png" type="Texture" id=5]
+[ext_resource path="res://assests/arnold/tiles/Slate4.png" type="Texture" id=6]
+[ext_resource path="res://assests/arnold/tiles/SlateTiles.png" type="Texture" id=7]
+[ext_resource path="res://assests/arnold/tiles/Wood.png" type="Texture" id=8]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 50, 50 )
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Bricks" type="Sprite" parent="."]
+position = Vector2( 50, 50 )
+texture = ExtResource( 1 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Bricks"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bricks/StaticBody2D"]
+visible = false
+shape = SubResource( 1 )
+
+[node name="Slate1" type="Sprite" parent="."]
+position = Vector2( 150, 50 )
+texture = ExtResource( 2 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Slate1"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Slate1/StaticBody2D"]
+visible = false
+shape = SubResource( 1 )
+
+[node name="Slate1Flipped" type="Sprite" parent="."]
+position = Vector2( 250, 50 )
+texture = ExtResource( 3 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Slate1Flipped"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Slate1Flipped/StaticBody2D"]
+visible = false
+shape = SubResource( 1 )
+
+[node name="Slate2" type="Sprite" parent="."]
+position = Vector2( 350, 50 )
+texture = ExtResource( 4 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Slate2"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Slate2/StaticBody2D"]
+visible = false
+shape = SubResource( 1 )
+
+[node name="Slate3" type="Sprite" parent="."]
+position = Vector2( 450, 50 )
+texture = ExtResource( 5 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Slate3"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Slate3/StaticBody2D"]
+visible = false
+shape = SubResource( 1 )
+
+[node name="Slate4" type="Sprite" parent="."]
+position = Vector2( 550, 50 )
+texture = ExtResource( 6 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Slate4"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Slate4/StaticBody2D"]
+visible = false
+shape = SubResource( 1 )
+
+[node name="SlateTile" type="Sprite" parent="."]
+position = Vector2( 50, 150 )
+texture = ExtResource( 7 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="SlateTile"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SlateTile/StaticBody2D"]
+visible = false
+shape = SubResource( 1 )
+
+[node name="Wood" type="Sprite" parent="."]
+position = Vector2( 150, 150 )
+texture = ExtResource( 8 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Wood"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Wood/StaticBody2D"]
+visible = false
+shape = SubResource( 1 )
+
