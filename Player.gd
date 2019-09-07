@@ -6,12 +6,12 @@ var impact
 
 
 var gravity = 2000
-export var max_walkspeed = 400
+export var max_walkspeed = 300
 var walkspeed = 0
 var velocity = Vector2()
 export var terminal_velocity = 3500
 var jumping = false
-export var jump_speed = -1000
+export var jump_speed = -475
 
 var spikes = null
 var completable = false  # by default. see _ready()
