@@ -27,6 +27,7 @@ animations = [ {
 } ]
 
 [node name="Player" type="KinematicBody2D"]
+editor/display_folded = true
 collision_layer = 2
 collision_mask = 13
 script = ExtResource( 1 )
@@ -65,5 +66,5 @@ stream = ExtResource( 8 )
 pitch_scale = 0.7
 
 [node name="Uuhhh" type="AudioStreamPlayer2D" parent="."]
+position = Vector2( 3.17334, 1.58667 )
 stream = ExtResource( 9 )
-
