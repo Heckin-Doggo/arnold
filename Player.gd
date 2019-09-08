@@ -100,16 +100,6 @@ func _physics_process(delta):
 	for i in get_slide_count():
 		var collision = get_slide_collision(i)
 		var collide_name = collision.collider.name
-		if collide_name != "TileMap":
-			pass
-			# I refuse to allow this code to be run in such a bad state. Make this a signal.
-			"""
-			if collide_name.substr(0,5) == "Spike":
-				$Uuhhh.play()
-				globals.player["lives"] -= 1
-				yield(get_tree().create_timer(.5), "timeout")
-				get_tree().reload_current_scene()
-			"""
 			# use collide_name to check the name of a colision. this will stay inactive otherwise.
 	
 	# Hit Sound
