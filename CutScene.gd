@@ -4,7 +4,7 @@ extends Control
 onready var label_text = $PanelContainer/Label.text
 var time = 0
 var number = 1
-export var tick_delay = 0.03
+export var tick_delay = 0.042
 onready var arnoldTween = $Arnold/Tween
 signal moveArnold
 
@@ -46,6 +46,26 @@ func main():
 	yield(get_tree().create_timer(1), "timeout")
 	$BatBonk.visible = false
 	$Bat.visible = true
+	yield(get_tree().create_timer(1), "timeout")
+	#clean up act
+	$Bat.visible = false
+	$Father.visible = false
+	
+	print("ACT 3 - Arnold Leaves")
+	for i in range(100):
+		yield(get_tree().create_timer(.005), "timeout") # delay between the move steps. I wish the Tween would work :(
+		$Arnold.position.x += -2
+	display_text("Youch. That's gonna leave a mark.")
+	yield(get_tree().create_timer(4), "timeout")
+	
+	$Arnold.animation = "default"  # he's chill again
+	display_text("But eventually, Arnold decides to leave.\nOff to the United States!")
+	for i in range(400):
+		yield(get_tree().create_timer(.005), "timeout") # delay between the move steps. 
+		$Arnold.position.x += -2
+	
+	get_tree().change_scene("res://maps/Map1.tscn") # begin the game.
+		
 	
 
 
@@ -63,7 +83,6 @@ func dialog(dialog_list):
 		yield(get_tree().create_timer(tick_delay), "timeout") # delay between ticks.
 		$PanelContainer/Label.text = tick
 		$Tick.play()
-		yield(get_tree().create_timer(0.01), "timeout")
 		print("ticked")
 	print("done ticking dialog")
 		
