@@ -44,4 +44,3 @@ custom_fonts/font = SubResource( 1 )
 text = "If you're in this room, the developer forgot to set the next room. Go nag him about that. Anyways, this WinZone will take you back to the beginning. Have a nice trip."
 align = 1
 autowrap = true
-
