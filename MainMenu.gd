@@ -15,7 +15,7 @@ func _ready():
 
 func _on_StartButton_pressed():
 	print("STARTING GAME")
-	get_tree().change_scene("res://maps/Map1.tscn")
+	get_tree().change_scene("res://CutScene.tscn")
 	
 func _on_ControlsButton_pressed():
 	print("Controls Menu")

@@ -18,10 +18,11 @@ __meta__ = {
 }
 
 [node name="Label" type="Label" parent="."]
-margin_left = 38.6597
-margin_top = 30.6654
-margin_right = 208.66
-margin_bottom = 84.6654
+margin_left = 55.0
+margin_top = 40.0
+margin_right = 225.0
+margin_bottom = 94.0
 custom_fonts/font = SubResource( 1 )
 text = "LIVES: 5"
 uppercase = true
+
