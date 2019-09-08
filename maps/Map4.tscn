@@ -35,3 +35,4 @@ scale = Vector2( 0.5, 0.5 )
 [node name="Spike2" parent="." instance=ExtResource( 5 )]
 position = Vector2( 337.612, 537.613 )
 scale = Vector2( 0.5, 0.5 )
+
