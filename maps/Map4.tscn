@@ -77,7 +77,7 @@ position = Vector2( 1111.96, 937.661 )
 scale = Vector2( 0.5, 0.5 )
 
 [node name="Spike65" parent="." instance=ExtResource( 5 )]
-position = Vector2( 762.304, 938.661 )
+position = Vector2( 762.674, 939.031 )
 scale = Vector2( 0.5, 0.5 )
 
 [node name="Spike50" parent="." instance=ExtResource( 5 )]
@@ -89,7 +89,7 @@ position = Vector2( 1286.26, 936.847 )
 scale = Vector2( 0.5, 0.5 )
 
 [node name="Spike68" parent="." instance=ExtResource( 5 )]
-position = Vector2( 936.609, 937.847 )
+position = Vector2( 936.979, 938.216 )
 scale = Vector2( 0.5, 0.5 )
 
 [node name="Spike3" parent="." instance=ExtResource( 5 )]
@@ -125,7 +125,7 @@ position = Vector2( 1236.35, 936.873 )
 scale = Vector2( 0.5, 0.5 )
 
 [node name="Spike66" parent="." instance=ExtResource( 5 )]
-position = Vector2( 886.699, 937.873 )
+position = Vector2( 887.068, 938.242 )
 scale = Vector2( 0.5, 0.5 )
 
 [node name="Spike7" parent="." instance=ExtResource( 5 )]
@@ -157,7 +157,7 @@ position = Vector2( 1161.98, 937.503 )
 scale = Vector2( 0.5, 0.5 )
 
 [node name="Spike64" parent="." instance=ExtResource( 5 )]
-position = Vector2( 812.32, 938.503 )
+position = Vector2( 812.69, 938.873 )
 scale = Vector2( 0.5, 0.5 )
 
 [node name="Spike49" parent="." instance=ExtResource( 5 )]
@@ -169,7 +169,7 @@ position = Vector2( 1336.28, 936.688 )
 scale = Vector2( 0.5, 0.5 )
 
 [node name="Spike69" parent="." instance=ExtResource( 5 )]
-position = Vector2( 986.625, 937.688 )
+position = Vector2( 986.995, 938.058 )
 scale = Vector2( 0.5, 0.5 )
 
 [node name="Spike2" parent="." instance=ExtResource( 5 )]
@@ -201,7 +201,7 @@ position = Vector2( 1211.25, 936.994 )
 scale = Vector2( 0.5, 0.5 )
 
 [node name="Spike67" parent="." instance=ExtResource( 5 )]
-position = Vector2( 861.591, 937.994 )
+position = Vector2( 861.961, 938.364 )
 scale = Vector2( 0.5, 0.5 )
 
 [node name="Spike6" parent="." instance=ExtResource( 5 )]
@@ -233,7 +233,7 @@ position = Vector2( 1136.87, 937.625 )
 scale = Vector2( 0.5, 0.5 )
 
 [node name="Spike72" parent="." instance=ExtResource( 5 )]
-position = Vector2( 787.212, 938.625 )
+position = Vector2( 787.582, 938.994 )
 scale = Vector2( 0.5, 0.5 )
 
 [node name="Spike53" parent="." instance=ExtResource( 5 )]
@@ -245,7 +245,7 @@ position = Vector2( 1311.17, 936.81 )
 scale = Vector2( 0.5, 0.5 )
 
 [node name="Spike70" parent="." instance=ExtResource( 5 )]
-position = Vector2( 961.517, 937.81 )
+position = Vector2( 961.887, 938.18 )
 scale = Vector2( 0.5, 0.5 )
 
 [node name="Spike4" parent="." instance=ExtResource( 5 )]
@@ -281,7 +281,7 @@ position = Vector2( 1261.26, 936.836 )
 scale = Vector2( 0.5, 0.5 )
 
 [node name="Spike71" parent="." instance=ExtResource( 5 )]
-position = Vector2( 911.607, 937.836 )
+position = Vector2( 911.977, 938.206 )
 scale = Vector2( 0.5, 0.5 )
 
 [node name="Spike8" parent="." instance=ExtResource( 5 )]
@@ -313,6 +313,5 @@ position = Vector2( 1186.88, 937.467 )
 scale = Vector2( 0.5, 0.5 )
 
 [node name="Spike63" parent="." instance=ExtResource( 5 )]
-position = Vector2( 837.229, 938.467 )
+position = Vector2( 837.598, 938.837 )
 scale = Vector2( 0.5, 0.5 )
-
