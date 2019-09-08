@@ -16,4 +16,3 @@ visible = false
 position = Vector2( 0, -3.62815 )
 scale = Vector2( 1, 1.09573 )
 polygon = PoolVector2Array( 25, 25, 0, -18, -25, 25 )
-
