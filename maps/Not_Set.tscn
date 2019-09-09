@@ -26,7 +26,7 @@ __meta__ = {
 }
 
 [node name="Player" parent="." instance=ExtResource( 3 )]
-position = Vector2( 125, 525 )
+position = Vector2( 140, 475 )
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
