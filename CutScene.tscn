@@ -8,7 +8,7 @@
 [ext_resource path="res://Arnold.gd" type="Script" id=6]
 [ext_resource path="res://assests/arnold/PopPop.png" type="Texture" id=7]
 [ext_resource path="res://assests/arnold/Bat.png" type="Texture" id=8]
-[ext_resource path="res://assests/arnold/tick.wav" type="AudioStream" id=9]
+[ext_resource path="res://assests/arnold/tick2.wav" type="AudioStream" id=9]
 [ext_resource path="res://assests/arnold/team fortress 2 quotes -Bonk!-.wav" type="AudioStream" id=10]
 
 [sub_resource type="DynamicFont" id=1]
