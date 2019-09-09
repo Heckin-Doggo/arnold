@@ -27,7 +27,7 @@ func _process(delta):
 func main():
 	print("ACT 1 - Arnold Intro")
 	display_text("There once was a young Austrian lad named Arnold.")
-	yield(get_tree().create_timer(8), "timeout") # delay so people can read.
+	yield(get_tree().create_timer(6), "timeout") # delay so people can read.
 	
 	print("ACT 2 - Arnold Dad")
 	for i in range(100):
