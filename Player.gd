@@ -33,7 +33,8 @@ func _ready():
 	if not completable:
 		print("WARNING: Level is missing WinZone. Can't complete.")
 	if not spikes:
-		print("No spikes detected")
+		#print("No spikes detected")
+		pass
 	
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
