@@ -17,7 +17,7 @@ _global_script_class_icons={
 
 config/name="Arnold"
 run/main_scene="res://MainMenu.tscn"
-boot_splash/bg_color=Color( 0.372549, 0.537255, 0.6, 1 )
+boot_splash/bg_color=Color( 0.0117647, 0.0627451, 0.0823529, 1 )
 config/icon="res://icon.png"
 
 [autoload]

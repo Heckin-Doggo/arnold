@@ -2,9 +2,9 @@
 
 [ext_resource path="res://Movie.tscn" type="PackedScene" id=1]
 [ext_resource path="res://tilesets/arnold_tiles.tres" type="TileSet" id=2]
-[ext_resource path="res://Player.tscn" type="PackedScene" id=3]
-[ext_resource path="res://GUI.tscn" type="PackedScene" id=4]
-[ext_resource path="res://WinZone.tscn" type="PackedScene" id=5]
+[ext_resource path="res://WinZone.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Player.tscn" type="PackedScene" id=4]
+[ext_resource path="res://GUI.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Spike.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Police.tscn" type="PackedScene" id=7]
 
@@ -25,19 +25,19 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="Player" parent="." instance=ExtResource( 3 )]
-position = Vector2( 2665, 2156.6 )
+[node name="WinZone" parent="." instance=ExtResource( 3 )]
+position = Vector2( 599.936, 499.825 )
+next_level = "EndScene"
+
+[node name="Player" parent="." instance=ExtResource( 4 )]
+position = Vector2( 2610, 2155 )
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="GUI" parent="CanvasLayer" instance=ExtResource( 4 )]
+[node name="GUI" parent="CanvasLayer" instance=ExtResource( 5 )]
 
 [node name="LevelBound" type="Position2D" parent="."]
 position = Vector2( 3050.1, 2249.85 )
-
-[node name="WinZone" parent="." instance=ExtResource( 5 )]
-position = Vector2( 599.936, 499.825 )
-next_level = "../EndScene"
 
 [node name="Spike" parent="." instance=ExtResource( 6 )]
 position = Vector2( 512.652, 1687.41 )
