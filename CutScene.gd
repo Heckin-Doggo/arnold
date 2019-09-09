@@ -16,12 +16,7 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	time += delta # count this up every second
-	if time > 1:
-		time -= 1
-		label_text = str(number)
-		# print(number)
-		number +=1
+	check_for_skip()  # skips cutscene if saw already
 
 
 func main():
@@ -92,6 +87,9 @@ func display_text(words):
 	dialog(dialog_list)
 	print("Displayed: " + words)
 	
+func check_for_skip():
+	if Input.is_action_pressed("ui_select"):
+		get_tree().change_scene("res://Maps/Map1.tscn")
 
 
 

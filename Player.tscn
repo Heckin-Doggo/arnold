@@ -11,7 +11,7 @@
 [ext_resource path="res://assests/uuhhh.wav" type="AudioStream" id=9]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 24.5, 37.1617 )
+extents = Vector2( 24.0547, 37.1617 )
 
 [sub_resource type="SpriteFrames" id=2]
 animations = [ {
@@ -27,7 +27,6 @@ animations = [ {
 } ]
 
 [node name="Player" type="KinematicBody2D"]
-editor/display_folded = true
 collision_layer = 2
 collision_mask = 13
 script = ExtResource( 1 )
@@ -38,7 +37,6 @@ scale = Vector2( 0.151515, 0.186535 )
 texture = ExtResource( 2 )
 
 [node name="PlayerCollision" type="CollisionShape2D" parent="."]
-visible = false
 shape = SubResource( 1 )
 
 [node name="oldsprite" type="AnimatedSprite" parent="."]
@@ -68,3 +66,4 @@ pitch_scale = 0.7
 [node name="Uuhhh" type="AudioStreamPlayer2D" parent="."]
 position = Vector2( 3.17334, 1.58667 )
 stream = ExtResource( 9 )
+

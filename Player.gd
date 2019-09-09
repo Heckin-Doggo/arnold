@@ -24,6 +24,8 @@ onready var globals = get_node("/root/Globals")
 func _ready():
 	add_to_group("player")  # allows for detection easier. also will make this work if multiplayer is added
 	
+	yield(get_tree().create_timer(.5), "timeout") # delay so you dont get jebaited
+	
 	#dead check
 	if globals.player["lives"] < 0:
 		get_tree().change_scene("res://Dead.tscn")
