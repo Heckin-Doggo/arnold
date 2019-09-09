@@ -15,7 +15,7 @@ _global_script_class_icons={
 
 [application]
 
-config/name="Arnold"
+config/name="Gravity Switch"
 run/main_scene="res://MainMenu.tscn"
 boot_splash/bg_color=Color( 0.219608, 0.203922, 0.203922, 1 )
 config/icon="res://icon.png"
