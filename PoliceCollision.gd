@@ -20,4 +20,6 @@ func _on_Police_body_entered(body):
 		if not globals.player["died"]:
 			globals.player["lives"] -= 1
 			globals.player["died"] = true
+			if globals.player["lives"] < 0:
+				get_tree().change_scene("res://Dead.tscn")
 			get_tree().reload_current_scene()
