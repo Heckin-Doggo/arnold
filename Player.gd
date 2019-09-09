@@ -24,6 +24,11 @@ onready var globals = get_node("/root/Globals")
 func _ready():
 	add_to_group("player")  # allows for detection easier. also will make this work if multiplayer is added
 	
+	#dead check
+	if globals.player["lives"] < 0:
+		get_tree().change_scene("res://Dead.tscn")
+	
+	
 	# check for existing winzone and spike group. makes it so in-dev levels dont crash
 	if get_parent().has_node("WinZone"):
 		completable = true
