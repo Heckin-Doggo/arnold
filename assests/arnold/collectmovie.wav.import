@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/collectmovie.wav-9e84816c33629d7729d09e7d41fbbcfe.sample"
+
+[deps]
+
+source_file="res://assests/arnold/collectmovie.wav"
+dest_files=[ "res://.import/collectmovie.wav-9e84816c33629d7729d09e7d41fbbcfe.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

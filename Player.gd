@@ -4,13 +4,14 @@ extends KinematicBody2D
 var state = "down"
 var impact
 
+
 var gravity = 2000
-export var max_walkspeed = 400
+export var max_walkspeed = 300
 var walkspeed = 0
 var velocity = Vector2()
 export var terminal_velocity = 3500
 var jumping = false
-export var jump_speed = 100
+export var jump_speed = -475
 
 var spikes = null
 var completable = false  # by default. see _ready()
@@ -23,6 +24,13 @@ onready var globals = get_node("/root/Globals")
 func _ready():
 	add_to_group("player")  # allows for detection easier. also will make this work if multiplayer is added
 	
+	yield(get_tree().create_timer(.5), "timeout") # delay so you dont get jebaited
+	
+	#dead check
+	if globals.player["lives"] < 0:
+		get_tree().change_scene("res://Dead.tscn")
+	
+	
 	# check for existing winzone and spike group. makes it so in-dev levels dont crash
 	if get_parent().has_node("WinZone"):
 		completable = true
@@ -32,12 +40,15 @@ func _ready():
 	if not completable:
 		print("WARNING: Level is missing WinZone. Can't complete.")
 	if not spikes:
-		print("No spikes detected")
+		#print("No spikes detected")
+		pass
 	
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-
-		
+func _process(delta):
+	if globals.player["died"]:  # death check
+		$Uuhhh.play()
+		globals.player["died"] = false
 
 # gets inputs
 func get_input():
@@ -81,7 +92,11 @@ func _physics_process(delta):
 	var old_speed = round(velocity.y)
 	
 	# actual physics
+	get_input()
 	velocity.y += gravity * delta
+	if jumping and is_on_floor():
+		jumping = false
+	velocity = move_and_slide(velocity, Vector2(0, -1))
 	velocity.y = clamp(velocity.y, -terminal_velocity, terminal_velocity)
 	velocity.x = round(velocity.x)
 	get_input()
@@ -93,16 +108,6 @@ func _physics_process(delta):
 	for i in get_slide_count():
 		var collision = get_slide_collision(i)
 		var collide_name = collision.collider.name
-		if collide_name != "TileMap":
-			pass
-			# I refuse to allow this code to be run in such a bad state. Make this a signal.
-			"""
-			if collide_name.substr(0,5) == "Spike":
-				$Uuhhh.play()
-				globals.player["lives"] -= 1
-				yield(get_tree().create_timer(.5), "timeout")
-				get_tree().reload_current_scene()
-			"""
 			# use collide_name to check the name of a colision. this will stay inactive otherwise.
 	
 	# Hit Sound

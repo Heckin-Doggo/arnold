@@ -54,7 +54,6 @@ valign = 1
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 position = Vector2( 790.192, 196.123 )
 frames = SubResource( 2 )
-frame = 1
 playing = true
 
 [node name="MoveDemo" type="Sprite" parent="."]

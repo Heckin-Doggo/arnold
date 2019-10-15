@@ -1,0 +1,142 @@
+[gd_scene load_steps=20 format=2]
+
+[ext_resource path="res://EndScene.gd" type="Script" id=1]
+[ext_resource path="res://assests/arnold/Governator.jpg" type="Texture" id=2]
+[ext_resource path="res://youre gone.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://assests/arnold/Arnold.png" type="Texture" id=4]
+[ext_resource path="res://assests/arnold/HappyArnold.png" type="Texture" id=5]
+[ext_resource path="res://assests/arnold/SadArnold.png" type="Texture" id=6]
+[ext_resource path="res://Arnold.gd" type="Script" id=7]
+[ext_resource path="res://assests/arnold/tick2.wav" type="AudioStream" id=8]
+[ext_resource path="res://assests/arnold/team fortress 2 quotes -Bonk!-.wav" type="AudioStream" id=9]
+[ext_resource path="res://assests/arnold/movies/terminator1.jpg" type="Texture" id=10]
+[ext_resource path="res://assests/arnold/movies/terminator2.jpg" type="Texture" id=11]
+[ext_resource path="res://assests/arnold/movies/terminator3.jpg" type="Texture" id=12]
+[ext_resource path="res://assests/arnold/movies/expendables2.jpg" type="Texture" id=13]
+[ext_resource path="res://assests/arnold/movies/expendables3.jpg" type="Texture" id=14]
+[ext_resource path="res://assests/arnold/movies/eraser.jpg" type="Texture" id=15]
+[ext_resource path="res://assests/arnold/movies/the6thday.jpg" type="Texture" id=16]
+[ext_resource path="res://assests/arnold/movies/predator.jpg" type="Texture" id=17]
+
+[sub_resource type="DynamicFont" id=1]
+size = 22
+outline_color = Color( 0.607843, 0.788235, 0.772549, 1 )
+font_data = ExtResource( 3 )
+
+[sub_resource type="SpriteFrames" id=2]
+animations = [ {
+"frames": [ ExtResource( 4 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 5 ) ],
+"loop": true,
+"name": "happy",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 6 ) ],
+"loop": true,
+"name": "sad",
+"speed": 5.0
+} ]
+
+[node name="EndScene" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Governator" type="Sprite" parent="."]
+visible = false
+position = Vector2( 530, 235 )
+scale = Vector2( 0.770677, 0.770677 )
+texture = ExtResource( 2 )
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -361.0
+margin_top = -144.0
+margin_right = 361.0
+margin_bottom = -27.0
+
+[node name="Label" type="Label" parent="PanelContainer"]
+margin_left = 7.0
+margin_top = 15.0
+margin_right = 715.0
+margin_bottom = 102.0
+custom_fonts/font = SubResource( 1 )
+text = "This is Sample Text.
+We can expand it.
+"
+align = 1
+valign = 1
+
+[node name="Arnold" type="AnimatedSprite" parent="."]
+position = Vector2( 536.782, 242.904 )
+frames = SubResource( 2 )
+script = ExtResource( 7 )
+
+[node name="Tween" type="Tween" parent="Arnold"]
+
+[node name="Tick" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 8 )
+volume_db = -10.53
+
+[node name="Bonk" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 9 )
+volume_db = -10.53
+
+[node name="Terminator1" type="Sprite" parent="."]
+visible = false
+position = Vector2( 110, 100 )
+scale = Vector2( 0.770677, 0.770677 )
+texture = ExtResource( 10 )
+
+[node name="Terminator2" type="Sprite" parent="."]
+visible = false
+position = Vector2( 95, 325 )
+scale = Vector2( 0.770677, 0.770677 )
+texture = ExtResource( 11 )
+
+[node name="Terminator3" type="Sprite" parent="."]
+visible = false
+position = Vector2( 260, 100 )
+scale = Vector2( 0.770677, 0.770677 )
+texture = ExtResource( 12 )
+
+[node name="Expendables2" type="Sprite" parent="."]
+visible = false
+position = Vector2( 800, 110 )
+scale = Vector2( 0.770677, 0.770677 )
+texture = ExtResource( 13 )
+
+[node name="Expendables3" type="Sprite" parent="."]
+visible = false
+position = Vector2( 955, 110 )
+scale = Vector2( 0.770677, 0.770677 )
+texture = ExtResource( 14 )
+
+[node name="Eraser" type="Sprite" parent="."]
+visible = false
+position = Vector2( 265, 325 )
+scale = Vector2( 0.770677, 0.770677 )
+texture = ExtResource( 15 )
+
+[node name="The6thDay" type="Sprite" parent="."]
+visible = false
+position = Vector2( 800, 325 )
+scale = Vector2( 0.770677, 0.770677 )
+texture = ExtResource( 16 )
+
+[node name="Predator" type="Sprite" parent="."]
+visible = false
+position = Vector2( 955, 325 )
+scale = Vector2( 0.770677, 0.770677 )
+texture = ExtResource( 17 )
+
